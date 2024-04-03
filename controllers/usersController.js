@@ -19,7 +19,7 @@ export const getUsersController = async (req, res) => {
     }
 }
 
-// 
+// Create User
 export const createUserController = async (req, res) => {
     try {
         const {name, email, age} = req.body
@@ -52,6 +52,7 @@ export const createUserController = async (req, res) => {
     }
 }
 
+// get single user by id
 export const getSingleUserController = async (req, res) => {
     try {
         const { id } = req.params
@@ -71,6 +72,7 @@ export const getSingleUserController = async (req, res) => {
     }
 }
 
+// delete user by id
 export const deleteUserController = async (req, res) => {
     try {
         const { id } = req.params
@@ -89,6 +91,7 @@ export const deleteUserController = async (req, res) => {
     }
 }
 
+// update user by id
 export const updateUserController = async (req, res) => {
     try {
         const { name, email, age } = req.body
