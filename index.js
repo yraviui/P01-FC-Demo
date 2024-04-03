@@ -2,6 +2,7 @@ import express from 'express'
 import colors from 'colors'
 import dotenv from 'dotenv'
 import cors from 'cors'
+import connectDB from './config/db.js'
 
 // PORT
 const PORT = process.env.PORT || 8080
@@ -9,11 +10,16 @@ const PORT = process.env.PORT || 8080
 // configure env
 dotenv.config()
 
+// database config
+connectDB()
+
 // rest object
 const app = express()
 
-// middlewares
+// cors
 app.use(cors())
+
+// middlewares
 app.use(express.json())
 
 // rest api for testing
